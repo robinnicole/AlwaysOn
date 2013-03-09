@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".NewRecord" >
+
+    	
+        <TextView
+        android:id="@+id/StatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="Status"
+        android:textSize=" 25dip" />
+        
+        
+    <TextView
+         android:id="@+id/AmplitudeTextView"
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_centerHorizontal ="true"
+         android:text ="0"
+          android:layout_marginTop="87dp"
+         android:textSize=" 25dip" 
+         
+         />
+    
+
+
+    
+    <Button
+        android:id="@+id/StartRecording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Record" />
+
+    <Button
+        android:id="@+id/StopRecording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/finishButton"
+        android:layout_below="@+id/StartRecording"
+        android:layout_marginTop="21dp"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/FinishRecording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/PlayRecording"
+        android:layout_marginTop="61dp"
+        android:text="Finish" />
+
+    <Button
+        android:id="@+id/PlayRecording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/StopRecording"
+        android:layout_marginTop="41dp"
+        android:text="Play" />
+
+</RelativeLayout>
