@@ -28,17 +28,24 @@ public class SoundMeter extends View {
 protected void onDraw(Canvas c) {
 		
 		super.onDraw(c);
-
+		//changeColor();
 		Rect soundRect = new Rect();
 		soundRect.set(700, 450, 350, 190);
-		Paint blue = new Paint();
-		blue.setColor(Color.BLUE);
-		blue.setStyle(Paint.Style.FILL);
+		Paint paint = new Paint();
+		
+		//blue.setColor(Color.BLUE);
+		paint.setARGB(255, 27, 224, 66);
+		//paint.setStyle(Paint.Style.FILL);
 
-		c.drawRect(soundRect, blue);
+		c.drawRect(soundRect, paint);
 
 	}
 
+
 }
+
+
+
+
 
 
