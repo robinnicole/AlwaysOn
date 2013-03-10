@@ -67,9 +67,10 @@
     
     <com.example.newrecord.SoundMeter
 		android:id="@+id/soundmeter"
-		android:width="100dp"
-		android:layout_width="100dp"
-		android:layout_height="100dp"
+		android:width="600dp"
+		android:layout_width="400dp"
+		android:layout_height="400dp"
+		 android:layout_marginTop="201dp"
 		/>
 
 </RelativeLayout>

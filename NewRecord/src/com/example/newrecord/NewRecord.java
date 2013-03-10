@@ -3,8 +3,6 @@ package com.example.newrecord;
 import java.io.File;
 import java.io.IOException;
 
-import com.example.newrecord.NewRecord.SoundMeter;
-
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaRecorder;
@@ -26,13 +24,7 @@ import android.widget.TextView;
 
 public class NewRecord extends Activity implements OnClickListener, OnCompletionListener{
 
-	public class SoundMeter {
 
-		public SoundMeter(NewRecord newRecord) {
-			// TODO Auto-generated constructor stub
-		}
-
-	}
 
 	TextView statusTextView, amplitudeTextView;
 	Button stopRecording, startRecording, playRecording, finishButton;
