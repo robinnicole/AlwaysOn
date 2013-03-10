@@ -64,5 +64,12 @@
         android:layout_below="@+id/StopRecording"
         android:layout_marginTop="41dp"
         android:text="Play" />
+    
+    <com.example.newrecord.SoundMeter
+		android:id="@+id/soundmeter"
+		android:width="100dp"
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		/>
 
 </RelativeLayout>
