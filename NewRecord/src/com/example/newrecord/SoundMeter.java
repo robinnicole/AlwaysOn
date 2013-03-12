@@ -9,7 +9,9 @@ import android.util.AttributeSet;
 import android.view.View;
 
 public class SoundMeter extends View {
-
+	
+	int volume = 0;
+	Paint paint=new Paint(); 
 	public SoundMeter(Context context) {
 		super(context);
 		
@@ -28,24 +30,34 @@ public class SoundMeter extends View {
 protected void onDraw(Canvas c) {
 		
 		super.onDraw(c);
-		//changeColor();
-		Rect soundRect = new Rect();
-		soundRect.set(700, 450, 350, 190);
-		Paint paint = new Paint();
 		
-		//blue.setColor(Color.BLUE);
-		paint.setARGB(255, 27, 224, 66);
+		//Circle soundCircle = new Circle();
+		//Rect soundRect = new Rect();
+		//soundRect.set(700, 450, 350, 190);
+		//soundCircle.set(700, 450, 100, paint);
+		 //paint.setARGB (155, (volume%255), 60, 60);
+		 paint.setARGB ((volume%255), 255, 60, 60);
 		//paint.setStyle(Paint.Style.FILL);
+		//c.drawRect(soundRect, paint);
+		//c.drawCircle(325,150,100, paint);
+		c.drawCircle(325,150,(volume%100), paint);
+		
+		//paint.setARGB(a, r, g, b);
 
-		c.drawRect(soundRect, paint);
+		//canvas.drawCircle(x, y, 20, paint);
 
 	}
+//pull in the amplitude value from progress update and pass it into this constructor
 
 
+
+public void setAmp(int amp) {
+
+	volume = amp;
+	invalidate();
 }
 
-
-
+}
 
 
 

@@ -70,8 +70,6 @@ public class NewRecord extends Activity implements OnClickListener, OnCompletion
 	}
 		
 	
-
-
 		@Override
 		public void onClick(View v) {
 		
@@ -121,7 +119,7 @@ public class NewRecord extends Activity implements OnClickListener, OnCompletion
 					recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
 					recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
 					recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-					recorder.setMaxDuration(7000);
+					recorder.setMaxDuration(12000);
 			
 					File path  = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/Android/data/com.apress.proandroidmedia.ch07.customrecorder/files/");
 					path.mkdirs();
@@ -193,13 +191,15 @@ public class NewRecord extends Activity implements OnClickListener, OnCompletion
 				
 					publishProgress(recorder.getMaxAmplitude());
 					}
-				
+		
 				
 				return null;
 			}
 	
 			protected void onProgressUpdate(Integer...progress) {
 				amplitudeTextView.setText(progress[0].toString());
+				soundMeter.setAmp(progress[0]);
+				//send this data to soundMeter to affect the color of the square or pass it into a variable called "volume' that can be passes over
 					
 		}
 	}
